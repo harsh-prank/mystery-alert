@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystery Alert</title>
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #080808;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.card {
+  max-width: 420px;
+  padding: 28px 18px;
+  border: 1px solid #333;
+  border-radius: 18px;
+  background: #151515;
+  box-shadow: 0 0 24px #ff202033;
+}
+
+h1 { font-size: 32px; overflow-wrap: anywhere; }
+#warning { color: #ff3333; }
+#reveal { display: none; color: #39ff88; }
+.amount { font-size: 24px; color: #ffd166; font-weight: bold; }
+.note { color: #aaa; font-size: 13px; }
+</style>
+</head>
+<body>
+<main class="card">
+  <section id="warning">
+    <div style="font-size:50px">⚠️</div>
+    <h1>YOUR PHONE IS HACKED!</h1>
+    <p class="amount">WITHDRAWAL: ₹20,000 ONLY</p>
+    <p>SECURITY ALERT — FAKE PRANK SIMULATION</p>
+    <p>Revealing the truth in 7 seconds...</p>
+  </section>
+
+  <section id="reveal">
+    <div style="font-size:60px">😂</div>
+    <h1>IT'S A PRANK BY HARSH!</h1>
+    <p>Bhai, chill maar! ❤️</p>
+    <p>Your phone is safe. No money was withdrawn.</p>
+  </section>
+
+  <p class="note">Just for fun • No payment • No data collection</p>
+</main>
+
+<script>
+setTimeout(() => {
+  document.getElementById("warning").style.display = "none";
+  document.getElementById("reveal").style.display = "block";
+}, 7000);
+</script>
+</body>
+</html>
